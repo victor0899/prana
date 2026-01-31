@@ -3,7 +3,7 @@ import { View, Text, Image, TouchableOpacity, StyleSheet } from 'react-native';
 import { Ionicons } from '@expo/vector-icons';
 import { colors, spacing, typography, globalStyles } from '../theme';
 
-export default function FeedCard({ post, onPress, onLike }) {
+export default function FeedCard({ post, onPress, onLike, onShare }) { // Added onShare prop
   const previewExercises = post.exercises.slice(0, 3);
   const remaining = post.exercises.length - 3;
 
@@ -76,6 +76,11 @@ export default function FeedCard({ post, onPress, onLike }) {
           <Ionicons name="chatbubble-outline" size={18} color={colors.textSecondary} />
           <Text style={styles.actionText}>{post.commentsCount}</Text>
         </View>
+        {/* Share Button */}
+        <TouchableOpacity style={globalStyles.row} onPress={onShare}>
+          <Ionicons name="share-social-outline" size={18} color={colors.textSecondary} />
+          <Text style={styles.actionText}>Share</Text>
+        </TouchableOpacity>
       </View>
     </TouchableOpacity>
   );
