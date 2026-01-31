@@ -9,6 +9,21 @@ export const currentUser = {
     followers: 1243,
     following: 389,
   },
+  caloriesBurnedToday: 850,
+  dailyCalorieGoal: 1200,
+  friendsStreak: {
+    currentStreak: 7,
+    friends: [
+      { id: 'u2', name: 'María G.', streak: 5 },
+      { id: 'u3', name: 'Carlos L.', streak: 7 },
+      { id: 'u5', name: 'Diego F.', streak: 3 },
+    ],
+    /* friendCount will be derived from friends.length in the component */
+  },
+  sleepDebt: {
+    hours: 8,
+    message: 'Get more sleep!',
+  },
 };
 
 const users = {

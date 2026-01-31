@@ -200,6 +200,11 @@ export default function RoutineDetailScreen({ route }) {
       contentContainerStyle={styles.list}
       style={globalStyles.container}
       showsVerticalScrollIndicator={false}
+      ListFooterComponent={() => (
+        <TouchableOpacity style={styles.saveButton}>
+          <Text style={styles.saveButtonText}>Save Routine</Text>
+        </TouchableOpacity>
+      )}
     />
   );
 }
@@ -212,6 +217,18 @@ const styles = StyleSheet.create({
   routineName: {
     ...typography.h2,
     color: colors.text,
+  },
+  saveButton: {
+    backgroundColor: colors.primary,
+    padding: spacing.md,
+    borderRadius: 8,
+    marginHorizontal: spacing.base,
+    marginTop: spacing.lg,
+    alignItems: 'center',
+  },
+  saveButtonText: {
+    ...typography.bodyBold,
+    color: colors.white,
   },
   description: {
     ...typography.body,

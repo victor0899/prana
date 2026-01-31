@@ -25,6 +25,15 @@ export default function FeedScreen({ navigation }) {
     navigation.navigate('PostDetail', { post });
   };
 
+  const handleShare = (postId) => {
+    alert(`Share post ${postId} pressed!`);
+    // In a real app, you would use React Native's Share API here
+    // Share.share({
+    //   message: 'Check out this workout post!',
+    //   url: `https://yourapp.com/posts/${postId}`,
+    // });
+  };
+
   return (
     <FlatList
       data={posts}
@@ -34,6 +43,7 @@ export default function FeedScreen({ navigation }) {
           post={item}
           onPress={() => handlePostPress(item)}
           onLike={() => handleLike(item.id)}
+          onShare={() => handleShare(item.id)} // Pass the handleShare function
         />
       )}
       contentContainerStyle={styles.list}
