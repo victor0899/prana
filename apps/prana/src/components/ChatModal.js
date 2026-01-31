@@ -2,7 +2,7 @@ import React from 'react';
 import { View, Text, StyleSheet, Modal, TouchableOpacity } from 'react-native';
 import { Ionicons } from '@expo/vector-icons';
 import { colors, spacing, typography } from '../theme';
-// import ChatBar from './ChatBar'; // Temporarily removed ChatBar import
+import ChatBar from './ChatBar'; // Re-use the ChatBar component
 
 export default function ChatModal({ visible, onClose, onSubmitMessage }) {
   return (
@@ -30,7 +30,7 @@ export default function ChatModal({ visible, onClose, onSubmitMessage }) {
             </View>
             {/* Future chat messages would go here */}
           </View>
-          {/* <ChatBar onSubmitMessage={onSubmitMessage} /> Temporarily removed ChatBar component */}
+          <ChatBar onSubmitMessage={onSubmitMessage} /> {/* Re-introduced ChatBar and passed onSubmitMessage */}
         </View>
       </View>
     </Modal>
