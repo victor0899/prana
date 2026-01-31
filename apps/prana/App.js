@@ -7,7 +7,7 @@ import { colors } from './src/theme';
 
 const theme = {
   ...DefaultTheme,
-  dark: true,
+  dark: false,
   colors: {
     ...DefaultTheme.colors,
     primary: colors.primary,
@@ -22,7 +22,7 @@ const theme = {
 function App() {
   return (
     <NavigationContainer theme={theme}>
-      <StatusBar barStyle="light-content" backgroundColor={colors.background} />
+      <StatusBar barStyle="dark-content" backgroundColor={colors.background} />
       <Navigation />
     </NavigationContainer>
   );

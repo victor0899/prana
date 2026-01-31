@@ -1,18 +1,18 @@
 import { StyleSheet } from 'react-native';
 
 export const colors = {
-  background: '#0D0D0D',
-  surface: '#1A1A1A',
-  surfaceLight: '#252525',
-  primary: '#4ADE80',
-  primaryDark: '#22C55E',
-  text: '#FFFFFF',
-  textSecondary: '#A0A0A0',
-  textMuted: '#666666',
-  border: '#2A2A2A',
+  background: '#FFFFFF',
+  surface: '#F5F5F5',
+  surfaceLight: '#EBEBEB',
+  primary: '#E8783A',
+  primaryDark: '#D4682E',
+  text: '#1A1A1A',
+  textSecondary: '#6B6B6B',
+  textMuted: '#9E9E9E',
+  border: '#E0E0E0',
   danger: '#EF4444',
   like: '#EF4444',
-  tabInactive: '#666666',
+  tabInactive: '#9E9E9E',
 };
 
 export const spacing = {
