@@ -84,6 +84,10 @@ export default function RoutineDetailScreen({ route }) {
           <Text style={styles.metaText}>{routine.estimatedDuration}</Text>
         </View>
         <View style={styles.metaItem}>
+          <Ionicons name="flame-outline" size={16} color={colors.primary} />
+          <Text style={styles.metaText}>{routine.caloriesBurned}</Text>
+        </View>
+        <View style={styles.metaItem}>
           <Ionicons name="checkmark-done-outline" size={16} color={colors.primary} />
           <Text style={styles.metaText}>{completedSets}/{totalSets} sets</Text>
         </View>

@@ -266,6 +266,7 @@ export const routines = [
     estimatedDuration: '~60 min',
     isAIGenerated: true,
     mainActivityTag: 'Builds punching power for Boxing',
+    caloriesBurned: '350 kcal',
     icon: 'barbell-outline',
     exercises: [
       {
