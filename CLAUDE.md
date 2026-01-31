@@ -72,17 +72,20 @@ apps/
 ```
 App.js                          # Entry point, registerRootComponent, NavigationContainer
 src/
-├── navigation/index.js         # BottomTabNavigator (Feed, Profile) + Stack navigators
+├── navigation/index.js         # BottomTabNavigator (Feed, Routines, Profile) + Stack navigators
 ├── screens/
 │   ├── FeedScreen.js           # FlatList of workout posts with like toggle
 │   ├── PostDetailScreen.js     # Full workout detail + comments + add comment
+│   ├── RoutinesScreen.js       # FlatList of pre-created routines
+│   ├── RoutineDetailScreen.js  # Routine detail with exercises/sets/reps/weight
 │   └── ProfileScreen.js        # Profile header + recent workouts
 ├── components/
 │   ├── FeedCard.js             # Workout post card (avatar, stats, exercises, actions)
+│   ├── RoutineCard.js          # Routine card (name, muscle tags, exercises count, duration)
 │   ├── CommentItem.js          # Single comment row
 │   └── ProfileHeader.js        # Avatar, name, bio, stats
 ├── data/
-│   └── mock.js                 # Hardcoded users, posts, comments, workouts
+│   └── mock.js                 # Hardcoded users, posts, comments, workouts, routines
 └── theme/
     └── index.js                # colors, spacing, typography, globalStyles
 ```

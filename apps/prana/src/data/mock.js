@@ -264,6 +264,9 @@ export const routines = [
     description: 'Focused on chest, shoulders and triceps. Progressive overload scheme with compound movements first, followed by isolation work.',
     muscleGroups: ['Chest', 'Shoulders', 'Triceps'],
     estimatedDuration: '~60 min',
+    isAIGenerated: true,
+    mainActivityTag: 'Builds punching power for Boxing',
+    icon: 'barbell-outline',
     exercises: [
       {
         name: 'Bench Press',
@@ -314,6 +317,9 @@ export const routines = [
     description: 'Quad and hamstring dominant session. Heavy compound lifts with moderate accessory volume for balanced leg development.',
     muscleGroups: ['Quads', 'Hamstrings', 'Glutes', 'Calves'],
     estimatedDuration: '~70 min',
+    isAIGenerated: true,
+    mainActivityTag: 'Footwork & stance stability for Boxing',
+    icon: 'analytics-outline',
     exercises: [
       {
         name: 'Barbell Squat',
@@ -364,6 +370,9 @@ export const routines = [
     description: 'Back and biceps session. Vertical and horizontal pulling movements for complete back development, with curl variations to finish.',
     muscleGroups: ['Back', 'Biceps', 'Rear Delts'],
     estimatedDuration: '~55 min',
+    isAIGenerated: true,
+    mainActivityTag: 'Guard endurance for Boxing',
+    icon: 'arrow-up-circle-outline',
     exercises: [
       {
         name: 'Pull-ups',
@@ -413,6 +422,9 @@ export const routines = [
     description: 'Full body session hitting all major muscle groups. Focused on the big compound lifts for overall strength and power development.',
     muscleGroups: ['Full Body'],
     estimatedDuration: '~75 min',
+    isAIGenerated: true,
+    mainActivityTag: 'Fight conditioning for Boxing',
+    icon: 'flash-outline',
     exercises: [
       {
         name: 'Deadlift',
@@ -463,6 +475,9 @@ export const routines = [
     description: 'Low intensity session focused on core strength, flexibility and mobility work. Great for active recovery days.',
     muscleGroups: ['Core', 'Hip Flexors', 'Mobility'],
     estimatedDuration: '~40 min',
+    isAIGenerated: true,
+    mainActivityTag: 'Core rotation & recovery for Boxing',
+    icon: 'body-outline',
     exercises: [
       {
         name: 'Plank Hold',
