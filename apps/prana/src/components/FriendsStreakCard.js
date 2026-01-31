@@ -11,24 +11,24 @@ export default function FriendsStreakCard({ streakData }) {
     <View style={styles.card}>
       <View style={styles.header}>
         <Ionicons name="people-outline" size={24} color={colors.primary} />
-        <Text style={styles.title}>Racha con Amigos</Text>
+        <Text style={styles.title}>Friends Streak</Text>
       </View>
       <Text style={styles.mainStreakText}>
-        ¡Llevas una racha de <Text style={styles.streakValue}>{currentStreak} días</Text>!
+        You're on a <Text style={styles.streakValue}>{currentStreak} day</Text> streak!
       </Text>
       {friendCount > 0 ? (
         <View style={styles.friendsList}>
           {friends.map((friend) => (
             <View key={friend.id} style={styles.friendItem}>
               <Text style={styles.friendName}>{friend.name}</Text>
-              <Text style={styles.friendStreak}>{friend.streak} días</Text>
+              <Text style={styles.friendStreak}>{friend.streak} days</Text>
             </View>
           ))}
         </View>
       ) : (
-        <Text style={styles.encouragementText}>Conéctate con amigos para empezar una racha!</Text>
+        <Text style={styles.encouragementText}>Connect with friends to start a streak!</Text>
       )}
-      <Text style={styles.encouragementText}>¡Sigue motivándote con tus compañeros!</Text>
+      <Text style={styles.encouragementText}>Keep motivating each other!</Text>
     </View>
   );
 }

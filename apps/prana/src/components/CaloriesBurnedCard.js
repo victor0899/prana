@@ -11,7 +11,7 @@ export default function CaloriesBurnedCard({ burned, goal }) {
     <View style={styles.card}>
       <View style={styles.header}>
         <Ionicons name="flame-outline" size={24} color={colors.primary} />
-        <Text style={styles.title}>Calorías Quemadas</Text>
+        <Text style={styles.title}>Calories Burned</Text>
       </View>
       <Text style={styles.burnedText}>{burned} kcal</Text>
       {goal && (
@@ -20,7 +20,7 @@ export default function CaloriesBurnedCard({ burned, goal }) {
         </View>
       )}
       {goal && (
-        <Text style={styles.goalText}>Meta diaria: {goal} kcal</Text>
+        <Text style={styles.goalText}>Daily goal: {goal} kcal</Text>
       )}
     </View>
   );

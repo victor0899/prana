@@ -22,7 +22,7 @@ export const currentUser = {
   },
   sleepDebt: {
     hours: 8,
-    message: '¡A dormir más!',
+    message: 'Get more sleep!',
   },
 };
 

@@ -10,10 +10,10 @@ export default function SleepDebtCard({ sleepDebtData }) {
     <View style={styles.card}>
       <View style={styles.header}>
         <Ionicons name="moon-outline" size={24} color={colors.primary} />
-        <Text style={styles.title}>Deuda de Sueño</Text>
+        <Text style={styles.title}>Sleep Debt</Text>
       </View>
       <Text style={styles.sleepDebtText}>
-        <Text style={styles.sleepDebtValue}>{hours} horas</Text>
+        <Text style={styles.sleepDebtValue}>{hours} hours</Text>
       </Text>
       <Text style={styles.messageText}>{message}</Text>
     </View>

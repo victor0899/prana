@@ -17,15 +17,15 @@ export default function ChatModal({ visible, onClose, onSubmitMessage }) {
           <TouchableOpacity style={styles.closeButton} onPress={onClose}>
             <Ionicons name="close-circle" size={30} color={colors.textMuted} />
           </TouchableOpacity>
-          <Text style={styles.modalTitle}>Asistente Prana AI</Text>
+          <Text style={styles.modalTitle}>Prana AI Assistant</Text>
           <View style={styles.chatContent}>
             <View style={styles.messageBubble}>
               <Text style={styles.messageText}>
-                ¡Hola! Soy Prana, tu asistente personal.
-                Puedo ayudarte a modificar tu rutina,
-                ajustarla si te has lesionado o simplemente
-                responder tus preguntas sobre entrenamiento.
-                ¿Cómo puedo ayudarte hoy?
+                Hi! I'm Prana, your personal assistant.
+                I can help you modify your routine,
+                adjust it if you've been injured, or simply
+                answer your training questions.
+                How can I help you today?
               </Text>
             </View>
             {/* Future chat messages would go here */}
