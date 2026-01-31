@@ -13,7 +13,16 @@ export const currentUser = {
   dailyCalorieGoal: 1200,
   friendsStreak: {
     currentStreak: 7,
-    friendCount: 3,
+    friends: [
+      { id: 'u2', name: 'María G.', streak: 5 },
+      { id: 'u3', name: 'Carlos L.', streak: 7 },
+      { id: 'u5', name: 'Diego F.', streak: 3 },
+    ],
+    /* friendCount will be derived from friends.length in the component */
+  },
+  sleepDebt: {
+    hours: 8,
+    message: '¡A dormir más!',
   },
 };
 
