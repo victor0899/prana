@@ -50,7 +50,7 @@ const Footer: React.FC = () => (
       </div>
     </div>
     <div className="max-w-7xl mx-auto border-t border-slate-800 mt-20 pt-8 flex flex-col md:flex-row justify-between items-center gap-4">
-      <p className="text-slate-500 text-xs">© 2024 Prana Wellness Inc. Harmonizing Vitality for All.</p>
+      <p className="text-slate-500 text-xs">© 2026 Prana Wellness Inc. Harmonizing Vitality for All.</p>
     </div>
   </footer>
 );
