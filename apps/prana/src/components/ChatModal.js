@@ -30,7 +30,7 @@ export default function ChatModal({ visible, onClose, onSubmitMessage }) {
             </View>
             {/* Future chat messages would go here */}
           </View>
-          <ChatBar onSubmitMessage={onSubmitMessage} /> {/* Re-introduced ChatBar and passed onSubmitMessage */}
+          <ChatBar onSubmitMessage={onSubmitMessage} />
         </View>
       </View>
     </Modal>

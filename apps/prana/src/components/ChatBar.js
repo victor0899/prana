@@ -1,9 +1,9 @@
 import React, { useState } from 'react';
-import { View, TextInput, TouchableOpacity, StyleSheet, KeyboardAvoidingView, Platform } from 'react-native';
+import { View, TextInput, TouchableOpacity, StyleSheet, KeyboardAvoidingView, Platform, Text } from 'react-native';
 import { Ionicons } from '@expo/vector-icons';
 import { colors, spacing } from '../theme';
 
-export default function ChatBar({ onSubmitMessage, onInputPress }) { // Removed isModalOpen prop as it's not directly needed here
+export default function ChatBar({ onSubmitMessage, onInputPress }) {
   const [message, setMessage] = useState('');
 
   const handleSend = () => {
@@ -13,40 +13,40 @@ export default function ChatBar({ onSubmitMessage, onInputPress }) { // Removed 
     }
   };
 
-  const InputContent = (
-    <View style={styles.inputContainer}>
-      <TextInput
-        style={styles.textInput}
-        value={message}
-        onChangeText={setMessage}
-        placeholder="Modifica tu rutina con Prana..."
-        placeholderTextColor={colors.textMuted}
-        multiline
-        editable={!onInputPress} // Editable only if no onInputPress (i.e., inside modal or standalone chat)
-        pointerEvents={onInputPress ? 'none' : 'auto'} // Disable pointer events if acting as a trigger
-      />
-      {/* Show send button always if it's an editable chat bar, or if onInputPress is not provided (meaning it's the active chat bar) */}
-      {!onInputPress && (
-        <TouchableOpacity onPress={handleSend} style={styles.sendButton}>
-          <Ionicons name="send" size={24} color={colors.primary} />
-        </TouchableOpacity>
-      )}
-    </View>
-  );
+  // If onInputPress is provided, this ChatBar acts as a button to open the modal
+  if (onInputPress) {
+    return (
+      <TouchableOpacity style={styles.containerTrigger} onPress={onInputPress} activeOpacity={0.7}>
+        <View style={styles.inputContainerTrigger}>
+          <Text style={styles.textInputTriggerPlaceholder}>
+            Modifica tu rutina con Prana...
+          </Text>
+          <Ionicons name="sparkles" size={20} color={colors.primary} />
+        </View>
+      </TouchableOpacity>
+    );
+  }
 
+  // Otherwise, it's the actual chat input bar
   return (
     <KeyboardAvoidingView
       behavior={Platform.OS === "ios" ? "padding" : "height"}
       style={styles.container}
       keyboardVerticalOffset={Platform.OS === "ios" ? 0 : 20}
     >
-      {onInputPress ? (
-        <TouchableOpacity style={styles.inputContainerTouchable} onPress={onInputPress} activeOpacity={0.7}>
-          {InputContent}
+      <View style={styles.inputContainer}>
+        <TextInput
+          style={styles.textInput} // Removed debugging styles
+          value={message}
+          onChangeText={setMessage}
+          placeholder="Escribe tu mensaje..."
+          placeholderTextColor={colors.textMuted}
+          multiline
+        />
+        <TouchableOpacity onPress={handleSend} style={styles.sendButton}>
+          <Ionicons name="send" size={24} color={colors.primary} />
         </TouchableOpacity>
-      ) : (
-        InputContent
-      )}
+      </View>
     </KeyboardAvoidingView>
   );
 }
@@ -57,11 +57,12 @@ const styles = StyleSheet.create({
     paddingVertical: spacing.sm,
     backgroundColor: 'transparent',
   },
-  inputContainerTouchable: { // Style for the TouchableOpacity wrapper when onInputPress is provided
-    borderRadius: 25,
-    overflow: 'hidden', // Ensure border radius applies to children
+  containerTrigger: {
+    paddingHorizontal: spacing.base,
+    paddingVertical: spacing.sm,
+    backgroundColor: 'transparent',
   },
-  inputContainer: {
+  inputContainerTrigger: {
     flexDirection: 'row',
     alignItems: 'center',
     backgroundColor: colors.surface,
@@ -70,13 +71,29 @@ const styles = StyleSheet.create({
     minHeight: 40,
     borderWidth: 1,
     borderColor: colors.border,
+    justifyContent: 'space-between',
+  },
+  textInputTriggerPlaceholder: {
+    flex: 1,
+    color: colors.textMuted,
+    paddingVertical: spacing.sm,
+  },
+  inputContainer: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    backgroundColor: colors.surface,
+    borderRadius: 25,
+    paddingHorizontal: spacing.md,
+    minHeight: 40, // Ensures a minimum height for the input area
+    borderWidth: 1,
+    borderColor: colors.border,
   },
   textInput: {
-    flex: 1,
+    flex: 1, // Ensures TextInput takes up all available space
     color: colors.text,
-    ...spacing.pY_sm,
-    ...spacing.pX_xs,
-    maxHeight: 100,
+    paddingVertical: spacing.sm,
+    paddingHorizontal: spacing.xs,
+    maxHeight: 100, // Allows it to grow up to a certain height
   },
   sendButton: {
     marginLeft: spacing.sm,
