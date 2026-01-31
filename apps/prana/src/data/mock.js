@@ -47,6 +47,7 @@ export const feedPosts = [
     workoutTitle: 'Upper Body Push',
     duration: '1h 12m',
     volume: '8,450 kg',
+    media: require('../../assets/media/image.png'),
     exercises: [
       { name: 'Bench Press', sets: [
         { reps: 10, weight: 60 },
@@ -255,6 +256,255 @@ export const comments = {
     { id: 'c32', user: users.u5, text: 'Solid push session bro', timestamp: '12h ago' },
   ],
 };
+
+export const routines = [
+  {
+    id: 'r1',
+    name: 'Upper Body Push',
+    description: 'Focused on chest, shoulders and triceps. Progressive overload scheme with compound movements first, followed by isolation work.',
+    muscleGroups: ['Chest', 'Shoulders', 'Triceps'],
+    estimatedDuration: '~60 min',
+    exercises: [
+      {
+        name: 'Bench Press',
+        sets: [
+          { setNumber: 1, reps: 10, weight: 60 },
+          { setNumber: 2, reps: 8, weight: 70 },
+          { setNumber: 3, reps: 6, weight: 80 },
+          { setNumber: 4, reps: 6, weight: 80 },
+        ],
+      },
+      {
+        name: 'Overhead Press',
+        sets: [
+          { setNumber: 1, reps: 10, weight: 40 },
+          { setNumber: 2, reps: 8, weight: 45 },
+          { setNumber: 3, reps: 8, weight: 45 },
+        ],
+      },
+      {
+        name: 'Incline Dumbbell Press',
+        sets: [
+          { setNumber: 1, reps: 12, weight: 24 },
+          { setNumber: 2, reps: 10, weight: 28 },
+          { setNumber: 3, reps: 10, weight: 28 },
+        ],
+      },
+      {
+        name: 'Lateral Raises',
+        sets: [
+          { setNumber: 1, reps: 15, weight: 10 },
+          { setNumber: 2, reps: 15, weight: 10 },
+          { setNumber: 3, reps: 12, weight: 12 },
+        ],
+      },
+      {
+        name: 'Tricep Pushdowns',
+        sets: [
+          { setNumber: 1, reps: 15, weight: 25 },
+          { setNumber: 2, reps: 12, weight: 30 },
+          { setNumber: 3, reps: 12, weight: 30 },
+        ],
+      },
+    ],
+  },
+  {
+    id: 'r2',
+    name: 'Lower Body Strength',
+    description: 'Quad and hamstring dominant session. Heavy compound lifts with moderate accessory volume for balanced leg development.',
+    muscleGroups: ['Quads', 'Hamstrings', 'Glutes', 'Calves'],
+    estimatedDuration: '~70 min',
+    exercises: [
+      {
+        name: 'Barbell Squat',
+        sets: [
+          { setNumber: 1, reps: 8, weight: 100 },
+          { setNumber: 2, reps: 6, weight: 110 },
+          { setNumber: 3, reps: 6, weight: 120 },
+          { setNumber: 4, reps: 4, weight: 130 },
+        ],
+      },
+      {
+        name: 'Romanian Deadlift',
+        sets: [
+          { setNumber: 1, reps: 10, weight: 80 },
+          { setNumber: 2, reps: 10, weight: 80 },
+          { setNumber: 3, reps: 8, weight: 90 },
+        ],
+      },
+      {
+        name: 'Leg Press',
+        sets: [
+          { setNumber: 1, reps: 12, weight: 180 },
+          { setNumber: 2, reps: 10, weight: 200 },
+          { setNumber: 3, reps: 10, weight: 200 },
+        ],
+      },
+      {
+        name: 'Leg Curl',
+        sets: [
+          { setNumber: 1, reps: 12, weight: 45 },
+          { setNumber: 2, reps: 12, weight: 45 },
+          { setNumber: 3, reps: 10, weight: 50 },
+        ],
+      },
+      {
+        name: 'Standing Calf Raises',
+        sets: [
+          { setNumber: 1, reps: 15, weight: 60 },
+          { setNumber: 2, reps: 15, weight: 60 },
+          { setNumber: 3, reps: 12, weight: 70 },
+        ],
+      },
+    ],
+  },
+  {
+    id: 'r3',
+    name: 'Pull Day',
+    description: 'Back and biceps session. Vertical and horizontal pulling movements for complete back development, with curl variations to finish.',
+    muscleGroups: ['Back', 'Biceps', 'Rear Delts'],
+    estimatedDuration: '~55 min',
+    exercises: [
+      {
+        name: 'Pull-ups',
+        sets: [
+          { setNumber: 1, reps: 10, weight: 0 },
+          { setNumber: 2, reps: 8, weight: 0 },
+          { setNumber: 3, reps: 8, weight: 0 },
+        ],
+      },
+      {
+        name: 'Barbell Row',
+        sets: [
+          { setNumber: 1, reps: 10, weight: 60 },
+          { setNumber: 2, reps: 8, weight: 70 },
+          { setNumber: 3, reps: 8, weight: 70 },
+        ],
+      },
+      {
+        name: 'Seated Cable Row',
+        sets: [
+          { setNumber: 1, reps: 12, weight: 50 },
+          { setNumber: 2, reps: 10, weight: 55 },
+          { setNumber: 3, reps: 10, weight: 55 },
+        ],
+      },
+      {
+        name: 'Face Pulls',
+        sets: [
+          { setNumber: 1, reps: 15, weight: 20 },
+          { setNumber: 2, reps: 15, weight: 20 },
+          { setNumber: 3, reps: 15, weight: 22 },
+        ],
+      },
+      {
+        name: 'Bicep Curls',
+        sets: [
+          { setNumber: 1, reps: 12, weight: 14 },
+          { setNumber: 2, reps: 10, weight: 16 },
+          { setNumber: 3, reps: 10, weight: 16 },
+        ],
+      },
+    ],
+  },
+  {
+    id: 'r4',
+    name: 'Full Body Power',
+    description: 'Full body session hitting all major muscle groups. Focused on the big compound lifts for overall strength and power development.',
+    muscleGroups: ['Full Body'],
+    estimatedDuration: '~75 min',
+    exercises: [
+      {
+        name: 'Deadlift',
+        sets: [
+          { setNumber: 1, reps: 5, weight: 140 },
+          { setNumber: 2, reps: 5, weight: 150 },
+          { setNumber: 3, reps: 3, weight: 160 },
+          { setNumber: 4, reps: 3, weight: 170 },
+        ],
+      },
+      {
+        name: 'Bench Press',
+        sets: [
+          { setNumber: 1, reps: 8, weight: 80 },
+          { setNumber: 2, reps: 6, weight: 90 },
+          { setNumber: 3, reps: 6, weight: 90 },
+        ],
+      },
+      {
+        name: 'Barbell Squat',
+        sets: [
+          { setNumber: 1, reps: 8, weight: 100 },
+          { setNumber: 2, reps: 6, weight: 110 },
+          { setNumber: 3, reps: 6, weight: 110 },
+        ],
+      },
+      {
+        name: 'Weighted Chin-ups',
+        sets: [
+          { setNumber: 1, reps: 8, weight: 10 },
+          { setNumber: 2, reps: 6, weight: 15 },
+          { setNumber: 3, reps: 6, weight: 15 },
+        ],
+      },
+      {
+        name: 'Dumbbell Shoulder Press',
+        sets: [
+          { setNumber: 1, reps: 10, weight: 22 },
+          { setNumber: 2, reps: 8, weight: 24 },
+          { setNumber: 3, reps: 8, weight: 24 },
+        ],
+      },
+    ],
+  },
+  {
+    id: 'r5',
+    name: 'Core & Mobility',
+    description: 'Low intensity session focused on core strength, flexibility and mobility work. Great for active recovery days.',
+    muscleGroups: ['Core', 'Hip Flexors', 'Mobility'],
+    estimatedDuration: '~40 min',
+    exercises: [
+      {
+        name: 'Plank Hold',
+        sets: [
+          { setNumber: 1, reps: 60, weight: 0 },
+          { setNumber: 2, reps: 60, weight: 0 },
+          { setNumber: 3, reps: 45, weight: 0 },
+        ],
+      },
+      {
+        name: 'Dead Bug',
+        sets: [
+          { setNumber: 1, reps: 12, weight: 0 },
+          { setNumber: 2, reps: 12, weight: 0 },
+          { setNumber: 3, reps: 10, weight: 0 },
+        ],
+      },
+      {
+        name: 'Bird Dog',
+        sets: [
+          { setNumber: 1, reps: 10, weight: 0 },
+          { setNumber: 2, reps: 10, weight: 0 },
+          { setNumber: 3, reps: 10, weight: 0 },
+        ],
+      },
+      {
+        name: 'Hip 90/90 Stretch',
+        sets: [
+          { setNumber: 1, reps: 30, weight: 0 },
+          { setNumber: 2, reps: 30, weight: 0 },
+        ],
+      },
+      {
+        name: 'Cat-Cow',
+        sets: [
+          { setNumber: 1, reps: 15, weight: 0 },
+          { setNumber: 2, reps: 15, weight: 0 },
+        ],
+      },
+    ],
+  },
+];
 
 export const userWorkouts = [
   {

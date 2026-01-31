@@ -21,6 +21,11 @@ export default function FeedCard({ post, onPress, onLike }) {
       {/* Workout Title */}
       <Text style={styles.workoutTitle}>{post.workoutTitle}</Text>
 
+      {/* Media */}
+      {post.media && (
+        <Image source={post.media} style={styles.media} />
+      )}
+
       {/* Stats Row */}
       <View style={styles.statsRow}>
         <View style={styles.stat}>
@@ -94,6 +99,12 @@ const styles = StyleSheet.create({
     ...typography.h3,
     color: colors.text,
     marginTop: spacing.md,
+  },
+  media: {
+    height: 300,
+    width: '100%',
+    marginTop: spacing.md,
+    borderRadius: 8,
   },
   statsRow: {
     flexDirection: 'row',
