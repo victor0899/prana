@@ -1,14 +1,22 @@
 
 import React from 'react';
+import {
+  AppleHealthLogo,
+  GoogleHealthLogo,
+  OuraLogo,
+  GarminLogo,
+  StravaLogo,
+  WhoopLogo,
+} from './BrandLogos';
 
 const IntegrationSection: React.FC = () => {
   const partners = [
-    { name: 'Apple Health', icon: '🍎' },
-    { name: 'Google Health', icon: '🤖' },
-    { name: 'Oura', icon: '💍' },
-    { name: 'Garmin', icon: '⌚' },
-    { name: 'Strava', icon: '🚴' },
-    { name: 'Whoop', icon: '⚡' }
+    { name: 'Apple Health', Icon: AppleHealthLogo },
+    { name: 'Google Fit', Icon: GoogleHealthLogo },
+    { name: 'Oura', Icon: OuraLogo },
+    { name: 'Garmin', Icon: GarminLogo },
+    { name: 'Strava', Icon: StravaLogo },
+    { name: 'Whoop', Icon: WhoopLogo },
   ];
 
   return (
@@ -18,14 +26,17 @@ const IntegrationSection: React.FC = () => {
         <p className="text-slate-500 mb-12 font-light max-w-xl mx-auto">
           Prana aggregates data from your favorite devices to build a living context of your vitality.
         </p>
-        
+
         <div className="flex flex-wrap justify-center gap-4 md:gap-12">
-          {partners.map((partner) => (
-            <div key={partner.name} className="flex flex-col items-center gap-2 grayscale hover:grayscale-0 transition-all opacity-60 hover:opacity-100 cursor-default">
-              <div className="w-20 h-20 bg-white rounded-2xl shadow-sm border border-slate-100 flex items-center justify-center text-3xl">
-                {partner.icon}
+          {partners.map(({ name, Icon }) => (
+            <div
+              key={name}
+              className="flex flex-col items-center gap-2 grayscale hover:grayscale-0 transition-all opacity-60 hover:opacity-100 cursor-default"
+            >
+              <div className="w-20 h-20 bg-white rounded-2xl shadow-sm border border-slate-100 flex items-center justify-center text-slate-700">
+                <Icon size={40} />
               </div>
-              <span className="text-sm font-medium text-slate-500">{partner.name}</span>
+              <span className="text-sm font-medium text-slate-500">{name}</span>
             </div>
           ))}
         </div>

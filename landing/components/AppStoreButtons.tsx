@@ -1,6 +1,6 @@
 
 import React from 'react';
-import { Apple, Play } from 'lucide-react';
+import { AppStoreLogo, GooglePlayLogo } from './BrandLogos';
 
 interface AppStoreButtonsProps {
   variant?: 'light' | 'dark';
@@ -14,7 +14,7 @@ const AppStoreButtons: React.FC<AppStoreButtonsProps> = ({ variant = 'dark' }) =
   return (
     <div className="flex flex-wrap items-center justify-center gap-4">
       <button className={`${baseClass} ${variant === 'dark' ? darkClass : lightClass}`}>
-        <Apple className="w-6 h-6" />
+        <AppStoreLogo size={24} className="w-6 h-6" />
         <div className="text-left">
           <p className="text-[10px] uppercase font-bold leading-none opacity-60">Download on the</p>
           <p className="text-lg font-bold leading-tight">App Store</p>
@@ -22,7 +22,7 @@ const AppStoreButtons: React.FC<AppStoreButtonsProps> = ({ variant = 'dark' }) =
       </button>
 
       <button className={`${baseClass} ${variant === 'dark' ? darkClass : lightClass}`}>
-        <Play className="w-6 h-6 fill-current" />
+        <GooglePlayLogo size={24} className="w-6 h-6" />
         <div className="text-left">
           <p className="text-[10px] uppercase font-bold leading-none opacity-60">Get it on</p>
           <p className="text-lg font-bold leading-tight">Google Play</p>

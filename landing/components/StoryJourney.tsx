@@ -92,13 +92,6 @@ const JourneyStep: React.FC<{ step: typeof JOURNEY_STEPS[0], index: number }> = 
                  </div>
               </div>
             )}
-
-            {!isLast && (
-              <div className="absolute -bottom-6 -right-6 bg-white p-4 rounded-2xl shadow-xl border border-slate-100 transform rotate-3">
-                 <p className="text-[10px] font-bold text-orange-600 uppercase">System Status</p>
-                 <p className="text-xs text-slate-500">Syncing context...</p>
-              </div>
-            )}
           </div>
         </div>
       </div>
