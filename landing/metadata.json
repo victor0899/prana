@@ -1,0 +1,8 @@
+{
+  "name": "Prana Wellness",
+  "description": "A high-end landing page for Prana, a context-aware wellness application that leverages AI to synchronize fitness, nutrition, and recovery based on vital data.",
+  "requestFramePermissions": [
+    "camera",
+    "microphone"
+  ]
+}
