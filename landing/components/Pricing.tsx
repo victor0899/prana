@@ -39,11 +39,11 @@ const Pricing: React.FC = () => {
 
               <div className="flex-1 space-y-4 mb-8">
                 {plan.features.map((feature) => (
-                  <div key={feature} className="flex items-start gap-3">
-                    <div className={`mt-1 flex-shrink-0 w-5 h-5 rounded-full flex items-center justify-center ${plan.highlighted ? 'bg-orange-100 text-orange-600' : 'bg-slate-200 text-slate-500'}`}>
+                  <div key={feature} className="flex items-center gap-3">
+                    <div className={`flex-shrink-0 w-5 h-5 rounded-full flex items-center justify-center ${plan.highlighted ? 'bg-orange-100 text-orange-600' : 'bg-slate-200 text-slate-500'}`}>
                       <Check className="w-3 h-3" strokeWidth={3} />
                     </div>
-                    <span className="text-slate-600 text-sm leading-tight font-light">{feature}</span>
+                    <span className="text-slate-600 text-sm font-light">{feature}</span>
                   </div>
                 ))}
               </div>
