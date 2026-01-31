@@ -19,7 +19,7 @@ export default function ChatBar({ onSubmitMessage, onInputPress }) {
       <TouchableOpacity style={styles.containerTrigger} onPress={onInputPress} activeOpacity={0.7}>
         <View style={styles.inputContainerTrigger}>
           <Text style={styles.textInputTriggerPlaceholder}>
-            Modifica tu rutina con Prana...
+            Modify your routine with Prana...
           </Text>
           <Ionicons name="sparkles" size={20} color={colors.primary} />
         </View>
@@ -39,7 +39,7 @@ export default function ChatBar({ onSubmitMessage, onInputPress }) {
           style={styles.textInput} // Removed debugging styles
           value={message}
           onChangeText={setMessage}
-          placeholder="Escribe tu mensaje..."
+          placeholder="Type your message..."
           placeholderTextColor={colors.textMuted}
           multiline
         />
@@ -53,6 +53,7 @@ export default function ChatBar({ onSubmitMessage, onInputPress }) {
 
 const styles = StyleSheet.create({
   container: {
+    width: '100%',
     paddingHorizontal: spacing.base,
     paddingVertical: spacing.sm,
     backgroundColor: 'transparent',
