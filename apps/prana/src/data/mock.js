@@ -9,6 +9,12 @@ export const currentUser = {
     followers: 1243,
     following: 389,
   },
+  caloriesBurnedToday: 850,
+  dailyCalorieGoal: 1200,
+  friendsStreak: {
+    currentStreak: 7,
+    friendCount: 3,
+  },
 };
 
 const users = {
